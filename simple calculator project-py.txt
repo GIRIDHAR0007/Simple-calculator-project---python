@@ -1,0 +1,38 @@
+while True:
+    select = input('operation needed:')
+    operation = 1 # giving a default operation value
+    number_1 = 0
+    number_2 = 0
+
+    if select == '+' :
+        operation = 1 # 1 implies addition
+
+    elif select == '-' :
+        operation = 2  #2 implies subtraction
+
+    elif select == '*':
+        operation = 3
+
+    elif select == '/':
+        operation = 4
+    else:
+        print('invalid input, please select something else...')
+        continue
+
+    try:
+        number_1 = int(input('First Number:'))
+        number_2 = int(input('second number:'))
+
+    except ValueError:
+        print('invalid input, starting again...')
+        continue
+
+    if operation ==  1 :
+        print("Sum of numbers = ", (number_1 + number_2))
+    elif operation == 2 :
+        print('Subtraction = ', number_1 - number_2)
+    elif operation == 3 :
+        print('Prduct = ', number_1 * number_2)
+    else:
+        print("Div = ", number_1/number_2)
+    break
